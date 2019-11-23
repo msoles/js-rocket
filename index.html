@@ -1,70 +1,18 @@
-hello js rocket
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JS Rocket</title>
+	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 
-<script type="text/javascript">
-	console.log('hello world');
+<body>
+	<h1> Hello JS rocket </h1>
+	<a href="#" onclick="doCoolStuff();">CLICK ME</a> 
+		<div class="cool" id="cool">
+			<p> Hello I'm cool!</p>
+		</div>
 
-	//VARIABLES: a variable is sth that refers to sth else. var is asigned to a variable that can change (blue, green..). Here we can store/refer to: 1)text as a string " " or ' ' 2)array which is a list [] 3)numbers (without quotes) 4) booleans true TRUE or false FALSE 5)object that combines all of this {}.
-
-var favColor = 'red';
-var myFavColors = ['blue', 'red', 'green']; //list 
-var numOfFavColors = 3;
-var hasGotFavColors = true; 
-
-var richObject = {
-	firstName: 'Rich',
-	lastName: 'Armstrong',
-	favColors: ['blue', 'red', 'green'],
-	yearsAlive: 103,
-	isMale: true
-};
-
- //FUNCTIONS: sth that can be reused, much like a variable, can be stored in a variable or a variable can refer to a function. The () makes it a function. What happens is inside the {}, a method.
-
-function whatIsMyFavColor () {
-
-
-}
-
-var whatIsMyFavColor = function () {
-	return false; //anything after return doesn't run so it would run false
-
-	return 'blue'; 
+</body>
+</html>
 	
-	return true; 
-}
-
-var doSomething = function () {
-	console.log("do something!!!");
-}
-
-
-var area = function (width, height) {
-	return width * height;
-}
-
-var fullname = function (firstname, secondname) {
-	return firstname + ' ' + secondname;
-}
-
-// THE IF STATEMENT: if sth then do sth
-// 1 = asigns a value, 2 == work as = so it is equal
-// && means &  || means or
-
-
-var name1 = 'Rich';
-var name2 = 'Bob';
-
-
-if (name1 == 'Rich' && name2 == 'Bob') { //if this is true 
-	//do sth
-	alert('true 1');  //perfom this
-} else if (name2 == 'Rich') {
-	alert('true 2');
-} else {
-	alert('false!!!!')
-}
-
-
-
-</script>
-
