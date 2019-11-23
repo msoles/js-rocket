@@ -8,17 +8,31 @@ var changeState = function (state) {
 	document.getElementById('countdown').innerHTML = countdownNumber;
 
 	//countdown
-
 	if (state == 2) {
 		timer = setInterval (function() {
 			countdownNumber = countdownNumber -1; //the next time it runs will be one less
 			document.getElementById('countdown').innerHTML = countdownNumber;
 			
-			if( countdownNumber <= 0) {
+			if (countdownNumber > 1 && countdownNumber <= 6) {
+				//be nervous
+				document.getElementById('nervous').className = 'nervous show';
 
+			} else {
+				document.getElementById('nervous').className = 'nervous';
+			}
+			
+			if (countdownNumber > 1 && countdownNumber <= 2) { //cant wait
+				document.getElementById('cant-wait').className = 'cant-wait show';
+				
+			} else {
+				document.getElementById('cant-wait').className = 'cant-wait';
+			}
+
+			if ( countdownNumber <= 0) {
 				changeState(3);
 			};
 		}, 500); //that is the interval in ms = 1s 
+
 	} else if (state == 3){
 		var success = setTimeout(function ()
 		{
@@ -27,7 +41,7 @@ var changeState = function (state) {
 			console.log('randomNumber:', randomNumber);
 
 			//success
-			if (randomNumber > 5) {
+			if (randomNumber > 1) { //probabilidad de que salga boom
 				changeState(4); 
 			} else {
 				changeState(5); //oh no!
